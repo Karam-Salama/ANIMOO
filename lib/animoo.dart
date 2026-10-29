@@ -2,18 +2,21 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 import 'core/routes/app_router.dart';
+import 'core/routes/routes.dart';
 import 'core/utils/app_strings.dart';
 
 class Animoo extends StatelessWidget {
-  const Animoo({super.key});
+  final AppRouter appRouter;
+  const Animoo({super.key, required this.appRouter});
 
   @override
   Widget build(BuildContext context) {
-    return const ScreenUtilInit(
+    return ScreenUtilInit(
         minTextAdapt: true,
         child: MaterialApp(
           title: AppStrings.appName,
-          // routerConfig: router,
+          onGenerateRoute: appRouter.onGenerateRoute,
+          initialRoute: Routes.onboarding,
           debugShowCheckedModeBanner: false,
         ));
   }
