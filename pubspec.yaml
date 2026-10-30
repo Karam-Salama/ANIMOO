@@ -98,6 +98,17 @@ flutter:
         - asset: assets/fonts/OriginalSurfer-Regular.ttf
           weight: 400
 
+    - family: PlayfairDisplay
+      fonts:
+        - asset: assets/fonts/PlayfairDisplay-Regular.ttf
+          weight: 400
+        - asset: assets/fonts/PlayfairDisplay-Medium.ttf
+          weight: 500
+        - asset: assets/fonts/PlayfairDisplay-SemiBold.ttf
+          weight: 600
+        - asset: assets/fonts/PlayfairDisplay-Bold.ttf
+          weight: 700
+
 #==================================  Generate  Flutter  Assets  Section  ==============================
 flutter_assets:
   assets_path: assets/svgs/

@@ -9,4 +9,8 @@ abstract class AppStrings {
   static const String profileTitle = 'Profile';
   static const String settingsTitle = 'Settings';
   static const String logoutButton = 'Logout';
+  static const String onboardingTitle =
+      'Discover the wild, one \n species at a time';
+  static const String onboardingSubtitle =
+      'Explore wildlife from every habitat, learn \n about each species, and share what you spot.';
 }

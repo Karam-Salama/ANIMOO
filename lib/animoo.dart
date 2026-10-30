@@ -14,6 +14,7 @@ class Animoo extends StatelessWidget {
   Widget build(BuildContext context) {
     return ScreenUtilInit(
         minTextAdapt: true,
+        designSize: const Size(375, 812),
         child: MaterialApp(
           title: AppStrings.appName,
           onGenerateRoute: appRouter.onGenerateRoute,
