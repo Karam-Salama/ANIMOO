@@ -11,17 +11,40 @@ dependencies:
   flutter:
     sdk: flutter
 
+  #! ============  app dependencies  ============
+  # App launcher icons generator
+  flutter_launcher_icons: ^0.13.1
   # Icons for iOS style design
   cupertino_icons: ^1.0.8
   # Responsive UI scaling and adaptation
   flutter_screenutil: ^5.9.3
   # Native splash screen customization
   flutter_native_splash: ^2.4.4
+  # Local storage for simple key-value pairs
+  shared_preferences: ^2.3.5
+  # SVG rendering and display support
+  flutter_svg: ^2.0.9
+  # Email validation utility
+  email_validator: ^3.0.0
+  # State management using BLoC pattern
+  flutter_bloc: ^8.1.6
+  # Persistent bottom navigation bar widget
+  persistent_bottom_nav_bar: ^6.2.1
 
 #==================================  Dev  Dependencies  Section  ==============================
 dev_dependencies:
   flutter_test:
     sdk: flutter
+
+#! ============  flutter launcher icons  ============
+flutter_launcher_icons:
+  android: "launcher_icon"
+  ios: true
+  image_path: "assets/icons/app-icon.png"
+  min_sdk_android: 24 # android min sdk min:16, default 21
+  adaptive_icon_background: "#21242C"
+  adaptive_icon_foreground: "assets/icons/app-icon.png"
+
   flutter_lints: ^4.0.0
 
 #==================================  Flutter  Section Add Images and Fonts ==============================
@@ -33,6 +56,7 @@ flutter:
     - assets/
     - assets/images/
     - assets/svgs/
+    - assets/icons/
 
   # To add assets to your application, add an assets section, like this:
   fonts:
