@@ -21,6 +21,7 @@ class Animoo extends StatelessWidget {
           debugShowCheckedModeBanner: false,
           theme: ThemeData(
             primaryColor: AppColors.primaryColor,
+            scaffoldBackgroundColor: AppColors.white,
           ),
         ));
   }

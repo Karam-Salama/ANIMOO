@@ -1,5 +1,5 @@
 abstract class AppStrings {
-  static const String appName = 'Animoo';
+  static const String appName = 'ANIMOO';
   static const String appDescription =
       'A Flutter application for anime enthusiasts.';
   static const String welcomeMessage = 'Welcome to Animoo!';
