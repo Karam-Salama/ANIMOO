@@ -1,14 +1,12 @@
-import 'package:animooo/core/helpers/extensions.dart';
 import 'package:animooo/modules/onboarding/widgets/already_have_an_account_text.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
-import '../../../core/databases/cache/cache_helper.dart';
 import '../../../core/routes/routes.dart';
-import '../../../core/services/service_locator.dart';
 import '../../../core/utils/app_colors.dart';
 import '../../../core/utils/app_styles.dart';
 import '../../../core/widgets/custom_btn.dart';
+import '../functions/onboarding.dart';
 import '../widgets/animo_image_and_text.dart';
 import '../widgets/animo_logo_and_name.dart';
 import '../widgets/onboarding_icons_section.dart';
@@ -41,9 +39,7 @@ class OnboardingView extends StatelessWidget {
                   style: AppStyles.Poppins600WhiteColor15,
                   mainAxisAlignment: MainAxisAlignment.center,
                   onPressed: () {
-                    getIt<CacheHelper>()
-                        .saveData(key: "isOnboardingVisted", value: true);
-                    context.pushReplacementNamed(Routes.register);
+                    onBoardingCompleted(context, nextRoute: Routes.register);
                   },
                 ),
                 SizedBox(height: 20.0.h),
