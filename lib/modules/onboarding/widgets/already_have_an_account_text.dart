@@ -3,6 +3,8 @@ import 'package:animooo/core/routes/routes.dart';
 import 'package:animooo/core/utils/app_colors.dart';
 import 'package:flutter/material.dart';
 
+import '../../../core/databases/cache/cache_helper.dart';
+import '../../../core/services/service_locator.dart';
 import '../../../core/utils/app_styles.dart';
 
 class AlreadyHaveAnAccountText extends StatelessWidget {
@@ -19,6 +21,8 @@ class AlreadyHaveAnAccountText extends StatelessWidget {
         ),
         GestureDetector(
           onTap: () {
+            getIt<CacheHelper>()
+                .saveData(key: "isOnboardingVisted", value: true);
             context.pushReplacementNamed(Routes.login);
           },
           child: Text(

@@ -30,6 +30,8 @@ dependencies:
   flutter_bloc: ^8.1.6
   # Persistent bottom navigation bar widget
   persistent_bottom_nav_bar: ^6.2.1
+  # Dependency injection and service locator
+  get_it: ^9.3.0
 
 #==================================  Dev  Dependencies  Section  ==============================
 dev_dependencies:
