@@ -1,27 +1,30 @@
-import 'package:animooo/core/routes/routes.dart';
 import 'package:animooo/core/utils/app_colors.dart';
 import 'package:flutter/material.dart';
-import '../../../core/utils/app_styles.dart';
-import '../functions/onboarding.dart';
+import '../utils/app_styles.dart';
 
-class AlreadyHaveAnAccountText extends StatelessWidget {
-  const AlreadyHaveAnAccountText({super.key});
+class HaveAnAccountText extends StatelessWidget {
+  const HaveAnAccountText({
+    super.key,
+    required this.text1,
+    required this.text2,
+    required this.onPressed,
+  });
 
+  final String text1, text2;
+  final VoidCallback onPressed;
   @override
   Widget build(BuildContext context) {
     return Row(
       mainAxisAlignment: MainAxisAlignment.center,
       children: [
         Text(
-          "Already have an account? ",
+          text1,
           style: AppStyles.Poppins400GreyColor13,
         ),
         GestureDetector(
-          onTap: () {
-            onBoardingCompleted(context, nextRoute: Routes.login);
-          },
+          onTap: onPressed,
           child: Text(
-            "Sign In",
+            text2,
             style: AppStyles.Poppins400GreyColor13.copyWith(
               color: AppColors.primaryColor,
               fontWeight: FontWeight.w600,

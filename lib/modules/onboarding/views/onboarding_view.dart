@@ -1,9 +1,10 @@
-import 'package:animooo/modules/onboarding/widgets/already_have_an_account_text.dart';
+import 'package:animooo/core/widgets/already_have_an_account_text.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 import '../../../core/routes/routes.dart';
 import '../../../core/utils/app_colors.dart';
+import '../../../core/utils/app_strings.dart';
 import '../../../core/utils/app_styles.dart';
 import '../../../core/widgets/custom_btn.dart';
 import '../functions/onboarding.dart';
@@ -35,7 +36,7 @@ class OnboardingView extends StatelessWidget {
                 OnboardingIconsSection(),
                 SizedBox(height: 40.0.h),
                 CustomButton(
-                  text: "Get Started",
+                  text: AppStrings.getStarted,
                   style: AppStyles.Poppins600WhiteColor15,
                   mainAxisAlignment: MainAxisAlignment.center,
                   onPressed: () {
@@ -43,7 +44,13 @@ class OnboardingView extends StatelessWidget {
                   },
                 ),
                 SizedBox(height: 20.0.h),
-                AlreadyHaveAnAccountText(),
+                HaveAnAccountText(
+                  text1: AppStrings.alreadyHaveAnAccount,
+                  text2: AppStrings.signIn,
+                  onPressed: () {
+                    onBoardingCompleted(context, nextRoute: Routes.login);
+                  },
+                ),
                 SizedBox(height: 20.0.h),
               ],
             ),

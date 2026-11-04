@@ -10,4 +10,6 @@ abstract class AppAssets {
   static const String onboardingIcons = 'assets/svgs/onboarding_icons.svg';
   static const String authLogo = 'assets/svgs/auth-logo.svg';
   static const String loginIcon = 'assets/svgs/log_in_icon.svg';
+  static const String registerIcon = 'assets/svgs/register_icon.svg';
+  static const String eyeIcon = 'assets/svgs/eye_icon.svg';
 }

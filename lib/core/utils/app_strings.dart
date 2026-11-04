@@ -13,4 +13,15 @@ abstract class AppStrings {
       'Discover the wild, one \n species at a time';
   static const String onboardingSubtitle =
       'Explore wildlife from every habitat, learn \n about each species, and share what you spot.';
+  static const String Email = 'Email';
+  static const String password = 'Password';
+  static const String alreadyHaveAnAccount = 'Already have an account? ';
+  static const String signIn = 'Sign In';
+  static const String getStarted = 'Get Started';
+  static const String dontHaveAnAccount = 'Don\'t have an account? ';
+  static const String signUp = 'Sign Up';
+  static const String firstName = 'First Name';
+  static const String lastName = 'Last Name';
+  static const String phone = 'Phone';
+  static const String confirmPassword = 'Confirm Password';
 }
