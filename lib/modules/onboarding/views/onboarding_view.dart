@@ -1,15 +1,14 @@
 import 'package:animooo/core/widgets/already_have_an_account_text.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-
+import '../../../core/helpers/spacing.dart';
 import '../../../core/routes/routes.dart';
 import '../../../core/utils/app_colors.dart';
 import '../../../core/utils/app_strings.dart';
-import '../../../core/utils/app_styles.dart';
-import '../../../core/widgets/custom_btn.dart';
 import '../functions/onboarding.dart';
 import '../widgets/animo_image_and_text.dart';
 import '../widgets/animo_logo_and_name.dart';
+import '../widgets/custom_onboarding_button.dart';
 import '../widgets/onboarding_icons_section.dart';
 import '../widgets/onboarding_text_section.dart';
 
@@ -21,39 +20,32 @@ class OnboardingView extends StatelessWidget {
     return Scaffold(
       backgroundColor: AppColors.white,
       body: SafeArea(
-        child: SingleChildScrollView(
-          child: Padding(
-            padding: EdgeInsets.all(16.0.h),
-            child: Column(
-              mainAxisAlignment: MainAxisAlignment.center,
-              children: [
-                AnimoLogoAndName(),
-                SizedBox(height: 20.0.h),
-                OnboardingImagesSection(),
-                SizedBox(height: 20.0.h),
-                OnboardingTextSection(),
-                SizedBox(height: 20.0.h),
-                OnboardingIconsSection(),
-                SizedBox(height: 40.0.h),
-                CustomButton(
-                  text: AppStrings.getStarted,
-                  style: AppStyles.Poppins600WhiteColor15,
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  onPressed: () {
-                    onBoardingCompleted(context, nextRoute: Routes.register);
-                  },
-                ),
-                SizedBox(height: 20.0.h),
-                HaveAnAccountText(
+        child: Padding(
+          padding: EdgeInsets.symmetric(vertical: 20.0.h, horizontal: 16.0.w),
+          child: CustomScrollView(
+            slivers: [
+              SliverToBoxAdapter(child: verticalSpace(10.0)),
+              const SliverToBoxAdapter(child: AnimoLogoAndName()),
+              SliverToBoxAdapter(child: verticalSpace(20.0)),
+              const SliverToBoxAdapter(child: OnboardingImagesSection()),
+              SliverToBoxAdapter(child: verticalSpace(40.0)),
+              const SliverToBoxAdapter(child: OnboardingTextSection()),
+              SliverToBoxAdapter(child: verticalSpace(40.0)),
+              const SliverToBoxAdapter(child: OnboardingIconsSection()),
+              SliverToBoxAdapter(child: verticalSpace(40.0)),
+              SliverToBoxAdapter(child: CustomOnboardingButton()),
+              SliverToBoxAdapter(child: verticalSpace(20.0)),
+              SliverToBoxAdapter(
+                child: HaveAnAccountText(
                   text1: AppStrings.alreadyHaveAnAccount,
                   text2: AppStrings.signIn,
                   onPressed: () {
                     onBoardingCompleted(context, nextRoute: Routes.login);
                   },
                 ),
-                SizedBox(height: 20.0.h),
-              ],
-            ),
+              ),
+              SliverToBoxAdapter(child: verticalSpace(60.0)),
+            ],
           ),
         ),
       ),

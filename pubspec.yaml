@@ -32,6 +32,8 @@ dependencies:
   persistent_bottom_nav_bar: ^6.2.1
   # Dependency injection and service locator
   get_it: ^9.3.0
+  # Dependency for Picking images from the gallery or camera
+  image_picker: ^1.1.2
 
 #==================================  Dev  Dependencies  Section  ==============================
 dev_dependencies:

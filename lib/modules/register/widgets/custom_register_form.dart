@@ -9,6 +9,7 @@ import '../../../core/utils/app_strings.dart';
 import '../../../core/utils/app_styles.dart';
 import '../../../core/widgets/custom_btn.dart';
 import '../../../core/widgets/cutom_text_form_field_widget_.dart';
+import 'image_picker_widget.dart';
 
 class CustomRegisterForm extends StatelessWidget {
   const CustomRegisterForm({super.key});
@@ -57,6 +58,8 @@ class CustomRegisterForm extends StatelessWidget {
             ),
             onSaved: (password) {},
           ),
+          verticalSpace(16.0),
+          ImagePickerWidget(),
           verticalSpace(60.0),
           CustomButton(
             text: AppStrings.signUp,

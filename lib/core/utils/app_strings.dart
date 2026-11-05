@@ -24,4 +24,5 @@ abstract class AppStrings {
   static const String lastName = 'Last Name';
   static const String phone = 'Phone';
   static const String confirmPassword = 'Confirm Password';
+  static const String uploadProfilePicture = 'Upload Profile Picture';
 }

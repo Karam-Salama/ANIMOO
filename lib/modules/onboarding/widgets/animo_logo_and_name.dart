@@ -1,6 +1,5 @@
 import 'package:animooo/core/utils/app_assets.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 
 import '../../../core/utils/app_strings.dart';
@@ -15,8 +14,8 @@ class AnimoLogoAndName extends StatelessWidget {
       mainAxisAlignment: MainAxisAlignment.center,
       mainAxisSize: MainAxisSize.min,
       children: [
-        SvgPicture.asset(AppAssets.animoLogo, width: 32.0.w, height: 32.0.h),
-        SizedBox(width: 8.0.w),
+        SvgPicture.asset(AppAssets.animoLogo, width: 32.0, height: 32.0),
+        SizedBox(width: 8.0),
         Text(
           AppStrings.appName,
           style: AppStyles.PlayfairDisplay700PrimaryColor16,

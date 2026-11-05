@@ -4,6 +4,7 @@ import 'package:flutter/material.dart';
 import '../../../core/helpers/spacing.dart';
 import '../../../core/routes/routes.dart';
 import '../../../core/utils/app_assets.dart';
+import '../../../core/utils/app_colors.dart';
 import '../../../core/utils/app_strings.dart';
 import '../../../core/widgets/auth_header_section_widget.dart';
 import '../../../core/widgets/already_have_an_account_text.dart';
@@ -15,6 +16,7 @@ class LoginView extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: AppColors.white,
       body: SafeArea(
         child: Padding(
           padding: EdgeInsets.symmetric(vertical: 20.0, horizontal: 16.0),
